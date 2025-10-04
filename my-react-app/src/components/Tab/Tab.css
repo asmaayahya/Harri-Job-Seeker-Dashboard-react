@@ -1,11 +1,12 @@
 .tab-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.6rem;
   border: 1px solid #6F86A2 ;
   background-color: #ffffff;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: background 0.2s;
   color: #6F86A2;
+  font-weight: 600;
 }
 
 .tab-btn:hover {

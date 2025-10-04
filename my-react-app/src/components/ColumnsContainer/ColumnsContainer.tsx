@@ -16,6 +16,7 @@ import { ButtonGroup } from "../ButtonGroup/ButtonGroup";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaShare } from "react-icons/fa";
 import { Tab } from "../Tab/Tab";
+import { TabList } from "../TabList/TabList";
 
 
 
@@ -62,11 +63,23 @@ export const ColumnsContainer: React.FC = () => {
               </ButtonGroup>
               <Button size="sm" leftIcon={<FaShare />} rightIcon={<IoIosArrowDown size={25}/>} variant="outline"><span style={{ fontWeight: 600 }}>Share</span></Button>
             </Row>
-            <Tab label={"test"}></Tab>
           </ContentBox>
 
 
-          <ContentBox >Left Box 2</ContentBox>
+          <ContentBox >
+            <TabList title="Applications">
+              <Tab label="All" onSelect={() => {}} isActive={true} />
+              <Tab label="Active" onSelect={() => {}} />
+              <Tab label="Screening questions" onSelect={() => {}} />
+              <Tab label="Training courses" onSelect={() => {}} />
+            </TabList>
+
+
+
+
+
+
+          </ContentBox>
           <ContentBox >Left Box 3</ContentBox>
         </Column>
 

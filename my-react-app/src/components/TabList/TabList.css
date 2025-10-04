@@ -1,0 +1,21 @@
+.tab-list-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  margin: 10px;
+}
+
+.tab-list-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #002237;
+}
+
+.tab-list {
+  display: flex;
+  gap: 0.5rem;
+}
