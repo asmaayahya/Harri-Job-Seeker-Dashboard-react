@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { ButtonGroup } from "../ButtonGroup/ButtonGroup";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaShare } from "react-icons/fa";
+import { Tab } from "../Tab/Tab";
 
 
 
@@ -61,6 +62,7 @@ export const ColumnsContainer: React.FC = () => {
               </ButtonGroup>
               <Button size="sm" leftIcon={<FaShare />} rightIcon={<IoIosArrowDown size={25}/>} variant="outline"><span style={{ fontWeight: 600 }}>Share</span></Button>
             </Row>
+            <Tab label={"test"}></Tab>
           </ContentBox>
 
 
