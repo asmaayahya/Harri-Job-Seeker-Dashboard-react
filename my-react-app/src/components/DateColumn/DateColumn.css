@@ -1,0 +1,21 @@
+.leading-column.confirmed {
+  background-color: #22B57E;
+}
+
+.date-month {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #0088dd;
+}
+
+.date-day {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0088dd;
+  line-height: 1rem;
+}
+
+.leading-column.confirmed .date-month,
+.leading-column.confirmed .date-day {
+  color: var(--white);
+}

@@ -20,6 +20,10 @@ import { TabList } from "../TabList/TabList";
 import { List } from "../List/List";
 import { ListItem } from "../ListItem/ListItem";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { FaArrowRight } from "react-icons/fa6";
+import { DateColumn } from "../DateColumn/DateColumn";
+import { JobCard } from "../JobCard/JobCard";
+import { JobList } from "../JobList/JobList";
 
 
 
@@ -81,39 +85,81 @@ export const ColumnsContainer: React.FC = () => {
              <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
               action={<Row >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
-                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+                <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
               action={<Row >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
-                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+                <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
               action={<Row >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
-                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+                <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
               action={<Row >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
-                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+                <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
               action={<Row >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
-                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+                <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>
             ]}>
               
             </List>
-
-
-
-
-
+            <Row justify="center"><Button variant="ghost"><Row justify="center" align="center" className="section-last-row"><span className="show-more">Show more</span><FaArrowRight/></Row> </Button>
+            </Row>
 
           </ContentBox>
-          <ContentBox >Left Box 3</ContentBox>
+          <ContentBox >
+            <TabList title="Interviews">
+              <Tab label="Pending" onSelect={() => {}} isActive={true} />
+              <Tab label="Confirmed" onSelect={() => {}} />
+            </TabList>
+            <List items={[
+             <ListItem leadingContent={<DateColumn month="Mar" day="24" />} title={"09:15am - 10:15am"} subtitle={"Waiting confirmation"} status={"Interview confirmed"} date={"Apr 11, 2018"}
+              action={
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View details</span></Button> }></ListItem>,
+              <ListItem leadingContent={<DateColumn month="Mar" day="26" confirmation={true}/>} title={"09:15am - 10:15am"} subtitle={"Intervtew confirmed with Ahmad Maqboul"}
+              action={
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View details</span></Button> } confirmed={true}></ListItem>,
+              <ListItem leadingContent={<DateColumn month="Mar" day="26" />} title={"09:15am - 10:15am"} subtitle={"Waiting confirmation"} status={"Interview confirmed"} date={"Apr 11, 2018"}
+              action={
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View details</span></Button> }></ListItem>
+            ]}>
+            </List>
+          </ContentBox>
+          <ContentBox>
+            <TabList title="Jobs you may be interested in" justify="end" children={<div className="tab-list-location" >New York</div>} ></TabList>
+            <List items={[
+            ]}>
+            </List>
+            <JobList gap={20}>
+              <JobCard
+                logo={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
+                companyName="Harri - Palestine"
+                jobTitle="Chapter Lead / Senior Crew Member"
+                action={<Button variant="outline" size="md" className="apply-btn">Apply now</Button>}
+              />
+              <JobCard
+                logo={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
+                companyName="Harri - Palestine"
+                jobTitle="Chapter Lead / Senior Crew Member"
+                action={<Button variant="outline" size="md" className="apply-btn">Apply now</Button>}
+              />
+              <JobCard
+                logo={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
+                companyName="Harri - Palestine"
+                jobTitle="Chapter Lead / Senior Crew Member"
+                action={<Button variant="outline" size="md" className="apply-btn">Apply now</Button>}
+              />
+            </JobList>
+
+          </ContentBox>
+
         </Column>
 
        

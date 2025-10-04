@@ -1,15 +1,16 @@
 import React from "react";
 import { Column } from "../Column/Column";
 import { Row } from "../Row/Row";
-import "./ListItem.css"
+import "./ListItem.css";
 
 interface ListItemProps {
   title: string;
   subtitle: string;
-  status: string;
-  date: string;
+  status?: string;
+  date?: string;
   leadingContent?: React.ReactNode;
   action?: React.ReactNode;
+  confirmed?: boolean;
 }
 
 export const ListItem: React.FC<ListItemProps> = ({
@@ -19,25 +20,23 @@ export const ListItem: React.FC<ListItemProps> = ({
   date,
   leadingContent,
   action,
+  confirmed = false,
 }) => {
   return (
-    <div className="list-item-container">
-      {/* Left section */}
+    <div className={`list-item-container ${confirmed ? "confirmed" : ""}`}>
       <Row justify="center" align="start">
         {leadingContent && <div className="item-media">{leadingContent}</div>}
-        <Column  >
+        <Column>
           <div className="item-title">{title}</div>
           <div className="item-subtitle">{subtitle}</div>
         </Column>
       </Row>
 
-      {/* Middle section */}
-      <Column justify="center" align="left" >
+      <Column justify="center" align="left">
         <div className="item-status">{status}</div>
         <div className="item-date">{date}</div>
       </Column>
 
-      {/* Right section */}
       <div className="list-item-right">
         {action && <div className="item-action">{action}</div>}
       </div>
