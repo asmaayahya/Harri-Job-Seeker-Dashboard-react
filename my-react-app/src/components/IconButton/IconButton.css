@@ -1,0 +1,51 @@
+.icon-btn {
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.icon-btn.sm {
+  width: 1.1rem;
+  height: 1.1rem;
+  font-size: 0.875rem;
+}
+
+.icon-btn.md {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.icon-btn.lg {
+    width: 3.1rem;
+    height: 3.1rem;
+    font-size: 1.125rem;
+}
+
+.icon-btn.rounded {
+  border-radius: 50%;
+}
+
+.icon-btn.square.lg {
+  border-radius: 10px;
+}
+
+.icon-btn.square.md {
+      border-radius: 7px;
+
+}
+
+.icon-btn.square.sm {
+      border-radius: 3px;
+
+}
+
+
+
+
+
+
+
