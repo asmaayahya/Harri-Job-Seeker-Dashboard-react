@@ -81,6 +81,12 @@
 
 }
 
+.btn-text-lg {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
 @media (max-width: 768px) {
   .col-container-grid {
     flex-direction: column;

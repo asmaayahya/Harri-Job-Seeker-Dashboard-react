@@ -17,6 +17,10 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaShare } from "react-icons/fa";
 import { Tab } from "../Tab/Tab";
 import { TabList } from "../TabList/TabList";
+import { List } from "../List/List";
+import { ListItem } from "../ListItem/ListItem";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+
 
 
 
@@ -73,6 +77,35 @@ export const ColumnsContainer: React.FC = () => {
               <Tab label="Screening questions" onSelect={() => {}} />
               <Tab label="Training courses" onSelect={() => {}} />
             </TabList>
+            <List items={[
+             <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
+              action={<Row >
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
+                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+              </Row> }></ListItem>,
+                           <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
+              action={<Row >
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
+                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+              </Row> }></ListItem>,
+                           <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
+              action={<Row >
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
+                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+              </Row> }></ListItem>,
+                           <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
+              action={<Row >
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
+                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+              </Row> }></ListItem>,
+                           <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
+              action={<Row >
+                <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
+                <IconButton icon={<HiOutlineDotsHorizontal size={40} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
+              </Row> }></ListItem>
+            ]}>
+              
+            </List>
 
 
 
