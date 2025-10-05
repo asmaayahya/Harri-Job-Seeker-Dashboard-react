@@ -22,8 +22,15 @@ import { ListItem } from "../ListItem/ListItem";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { FaArrowRight } from "react-icons/fa6";
 import { DateColumn } from "../DateColumn/DateColumn";
-import { JobCard } from "../JobCard/JobCard";
-import { JobList } from "../JobList/JobList";
+import { JobList } from "../CardList/CardList";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { SidebarSectionTitle } from "../SidebarSectionTitle/SidebarSectionTitle";
+import { InfoItem } from "../InfoItem/InfoItem";
+import { ActionItem } from "../ActionItem/ActionItem";
+import { ProgressCircle } from "../ProgressCircle/ProgressCircle";
+import { CardItem } from "../CardItem/CardItem";
+
 
 
 
@@ -83,34 +90,34 @@ export const ColumnsContainer: React.FC = () => {
             </TabList>
             <List items={[
              <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
-              action={<Row >
+              action={<Row gap={"0.8rem"} >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
                 <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
-              action={<Row >
+              action={<Row gap={"0.8rem"} >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
                 <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
-              action={<Row >
+              action={<Row gap={"0.8rem"} >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
                 <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
-              action={<Row >
+              action={<Row gap={"0.8rem"} >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
                 <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>,
                            <ListItem leadingContent={<img src="src/assets/harri_logo.jpg"></img>} title={"Designer"} subtitle={"Harri - Palestine"} status={"Interview confirmed"} date={"Apr 11, 2018"}
-              action={<Row >
+              action={<Row gap={"0.8rem"} >
                 <Button variant="ghost" size="md"><span className="btn-text-lg">View Job</span></Button>
                 <IconButton icon={<HiOutlineDotsHorizontal size={20} color="black" />} color="#F5F6F7" iconColor="black" rounded={false}></IconButton>
               </Row> }></ListItem>
             ]}>
               
             </List>
-            <Row justify="center"><Button variant="ghost"><Row justify="center" align="center" className="section-last-row"><span className="show-more">Show more</span><FaArrowRight/></Row> </Button>
+            <Row justify="center"><Button variant="ghost" rightIcon={<FaArrowRight/>}  className="section-last-row">Show more </Button>
             </Row>
 
           </ContentBox>
@@ -138,25 +145,30 @@ export const ColumnsContainer: React.FC = () => {
             ]}>
             </List>
             <JobList gap={20}>
-              <JobCard
-                logo={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
-                companyName="Harri - Palestine"
-                jobTitle="Chapter Lead / Senior Crew Member"
+              <CardItem
+                media={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
+                title="Harri - Palestine"
+                subtitle="Chapter Lead / Senior Crew Member"
                 action={<Button variant="outline" size="md" className="apply-btn">Apply now</Button>}
               />
-              <JobCard
-                logo={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
-                companyName="Harri - Palestine"
-                jobTitle="Chapter Lead / Senior Crew Member"
+              <CardItem
+                media={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
+                title="Harri - Palestine"
+                subtitle="Chapter Lead / Senior Crew Member"
                 action={<Button variant="outline" size="md" className="apply-btn">Apply now</Button>}
               />
-              <JobCard
-                logo={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
-                companyName="Harri - Palestine"
-                jobTitle="Chapter Lead / Senior Crew Member"
+              <CardItem
+                media={<img src="src/assets/harri_logo.jpg" alt="Harri Logo" />}
+                title="Harri - Palestine"
+                subtitle="Chapter Lead / Senior Crew Member"
                 action={<Button variant="outline" size="md" className="apply-btn">Apply now</Button>}
               />
             </JobList>
+            <Row justify="center" className="pagination-container" gap={"0.7rem"}>
+              <IconButton icon={<MdOutlineKeyboardArrowLeft color="#0088dd" size={30} />} color="#E5EEFA"></IconButton>
+              <div className="pagination-info">3 of 10</div>
+              <IconButton icon={<MdOutlineKeyboardArrowRight color="#0088dd" size={30}/>} color="#E5EEFA"></IconButton>
+            </Row>
 
           </ContentBox>
 
@@ -164,9 +176,162 @@ export const ColumnsContainer: React.FC = () => {
 
        
         <Column className="right-column">
-          <ContentBox >Right Box 1</ContentBox>
-          <ContentBox >Right Box 2</ContentBox>
-          <ContentBox >Right Box 3</ContentBox>
+          <ContentBox >
+            <SidebarSectionTitle title="Profile Strength" />
+            <ProgressCircle progress={65} size={140} strokeWidth={25} circleColor="#E6E8EA" progressColor="#FECA57" />
+
+            <Column className="action-column" gap={"0.5rem"}>
+            
+            <Row justify="center"  gap={"0.5rem"}>
+              <ActionItem icon={<img src="src/assets/skills.png" width="35px" height="35px"></img>} label="Add skills" />
+              <ActionItem icon={<img src="src/assets/refer.png" width="35px" height="35px"></img>} label="Add References" />
+            </Row>
+            <Row justify="center" gap={"0.5rem"}>
+              <ActionItem icon={<img src="src/assets/expertise.png" width="35px" height="35px"></img>} label="Update Experience" />
+              <ActionItem icon={<img src="src/assets/image (1).png" width="35px" height="35px"></img>} label="Add cover photo" />
+            </Row>
+            </Column>
+
+          </ContentBox>
+
+
+          <ContentBox >
+              <SidebarSectionTitle title="Learn from our top member" />
+            <List items={[
+              <>
+              <InfoItem
+                leadingContent={<Avatar src="src/assets/user_photo.jpg" alt="Profile"/>}
+                title="Maria Illescas"
+                subtitle="Marketing Manager" />
+
+                              <InfoItem
+                leadingContent={<Avatar src="src/assets/user_photo.jpg" alt="Profile"/>}
+                title="Maria Illescas"
+                subtitle="Marketing Manager" />
+                              <InfoItem
+                leadingContent={<Avatar src="src/assets/user_photo.jpg" alt="Profile"/>}
+                title="Maria Illescas"
+                subtitle="Marketing Manager" />
+                              <InfoItem
+                leadingContent={<Avatar src="src/assets/user_photo.jpg" alt="Profile"/>}
+                title="Maria Illescas"
+                subtitle="Marketing Manager" />
+                                              <InfoItem
+                leadingContent={<Avatar src="src/assets/user_photo.jpg" alt="Profile"/>}
+                title="Maria Illescas"
+                subtitle="Marketing Manager" />
+                                              <InfoItem
+                leadingContent={<Avatar src="src/assets/user_photo.jpg" alt="Profile"/>}
+                title="Maria Illescas"
+                subtitle="Marketing Manager" />
+                                              <InfoItem
+                leadingContent={<Avatar src="src/assets/user_photo.jpg" alt="Profile"/>}
+                title="Maria Illescas"
+                subtitle="Marketing Manager" />
+              </>
+
+            ]}></List>
+            <Row justify="center"><Button variant="ghost" rightIcon={<FaArrowRight/>}  className="section-last-row">Show more </Button>
+            </Row>
+
+          </ContentBox>
+
+          <ContentBox >
+              <SidebarSectionTitle title="Similar jobs" />
+            <List items={[
+              <>
+              <InfoItem
+                leadingContent={<img src="src/assets/harri_logo.jpg" />}
+                title="Chapter Lead/ Senior Crew Member"
+                subtitle="Harri - Palestine"
+                subtitlePosition="above"
+                />
+
+              <InfoItem
+                leadingContent={<img src="src/assets/harri_logo.jpg" />}
+                title="Chapter Lead/ Senior Crew Member"
+                subtitle="Harri - Palestine"
+                subtitlePosition="above"
+                />
+
+              <InfoItem
+                leadingContent={<img src="src/assets/harri_logo.jpg" />}
+                title="Chapter Lead/ Senior Crew Member"
+                subtitle="Harri - Palestine"
+                subtitlePosition="above"
+                />
+              <InfoItem
+                leadingContent={<img src="src/assets/harri_logo.jpg" />}
+                title="Chapter Lead/ Senior Crew Member"
+                subtitle="Harri - Palestine"
+                subtitlePosition="above"
+                />
+
+              <InfoItem
+                leadingContent={<img src="src/assets/harri_logo.jpg" />}
+                title="Chapter Lead/ Senior Crew Member"
+                subtitle="Harri - Palestine"
+                subtitlePosition="above"
+                />
+
+              <InfoItem
+                leadingContent={<img src="src/assets/harri_logo.jpg" />}
+                title="Chapter Lead/ Senior Crew Member"
+                subtitle="Harri - Palestine"
+                subtitlePosition="above"
+                />
+
+              <InfoItem
+                leadingContent={<img src="src/assets/harri_logo.jpg" />}
+                title="Chapter Lead/ Senior Crew Member"
+                subtitle="Harri - Palestine"
+                subtitlePosition="above"
+                />
+
+              </>
+
+
+
+            ]}></List>
+
+            <Row justify="center"><Button variant="ghost" rightIcon={<FaArrowRight/>}  className="section-last-row">Show more </Button>
+            </Row>
+          </ContentBox>
+
+          <ContentBox >
+              <SidebarSectionTitle title="Articles" />
+
+            <List items={[
+              <>
+              <InfoItem
+                title="Articles lorem ipsem #1"
+                subtitle="Harri - Palestine" />
+
+              <InfoItem
+                title="Articles lorem ipsem #2"
+                subtitle="Harri - Palestine" />
+
+              <InfoItem
+                title="Articles lorem ipsem #3"
+                subtitle="Harri - Palestine" />
+              <InfoItem
+                title="Articles lorem ipsem #4"
+                subtitle="Harri - Palestine" />
+
+              <InfoItem
+                title="Articles lorem ipsem #5"
+                subtitle="Harri - Palestine" />
+
+              </>
+
+
+
+            ]}></List>
+
+            <Row justify="center"><Button variant="ghost" rightIcon={<FaArrowRight/>}  className="section-last-row">Show more </Button>
+            </Row>
+          </ContentBox>
+
         </Column>
       </div>
     </div>

@@ -1,0 +1,27 @@
+.info-item {
+  margin: 10px 0;
+  border-bottom:1px solid #d5d5d5 ;
+  padding: 0.3rem 0.9rem;
+}
+
+.item-media {
+  margin-right: 0.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.item-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #002237;
+}
+
+.item-subtitle {
+  font-size: 0.8rem;
+  color:#637784;
+}
+
+.info-item:last-child{
+   border-bottom:none ;
+   
+}

@@ -1,6 +1,6 @@
 import React, { type ReactNode } from "react";
 import { Row } from "../Row/Row";
-import "./JobList.css";
+import "./CardList.css";
 
 interface JobListProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ interface JobListProps {
 
 export const JobList: React.FC<JobListProps> = ({ children, gap = 20, className }) => {
   return (
-    <div className={`job-list ${className || ""}`}>
+    <div className={`card-list ${className || ""}`}>
       <Row justify="center" gap={gap}>
         {children}
       </Row>

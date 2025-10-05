@@ -24,7 +24,7 @@ export const ListItem: React.FC<ListItemProps> = ({
 }) => {
   return (
     <div className={`list-item-container ${confirmed ? "confirmed" : ""}`}>
-      <Row justify="center" align="start">
+      <Row justify="center" align="start" gap={"0.8rem"}>
         {leadingContent && <div className="item-media">{leadingContent}</div>}
         <Column>
           <div className="item-title">{title}</div>
@@ -32,7 +32,7 @@ export const ListItem: React.FC<ListItemProps> = ({
         </Column>
       </Row>
 
-      <Column justify="center" align="left">
+      <Column justify="center" align="left" >
         <div className="item-status">{status}</div>
         <div className="item-date">{date}</div>
       </Column>

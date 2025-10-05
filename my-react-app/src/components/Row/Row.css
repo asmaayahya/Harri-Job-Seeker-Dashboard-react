@@ -1,12 +1,10 @@
 .row {
   display: flex;
   flex-direction: row;
-  gap: 1rem; /* default gap if no inline style is provided */
-  align-items: center; /* default vertical alignment */
-  justify-content: flex-start; /* default horizontal alignment */
+  align-items: center;
+  justify-content: flex-start;
 }
 
-/* Horizontal justification */
 .row-start {
   justify-content: flex-start;
 }
@@ -27,7 +25,6 @@
   justify-content: space-around;
 }
 
-/* Vertical alignment */
 .row-align-start {
   align-items: flex-start;
 }
