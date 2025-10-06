@@ -11,7 +11,7 @@ export const App = () => {
     <>
       <Header
         logoSrc="src/assets/harri.png"
-        userName="Jerrad"
+        userName="Jeeeerrad"
         userPhoto="src/assets/user_photo.jpg" />
 
       <ColumnsContainer>

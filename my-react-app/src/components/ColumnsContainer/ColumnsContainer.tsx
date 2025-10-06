@@ -42,7 +42,7 @@ export const ColumnsContainer: React.FC = () => {
         
         <Column className="left-column">
 
-          <ContentBox className="cover-box">
+          <ContentBox className="cover-box" >
             <img
               className="cover-image"
               src="src/assets/cover.jpg"
